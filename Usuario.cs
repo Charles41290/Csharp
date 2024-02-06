@@ -95,9 +95,8 @@ namespace PrimerEntrega
 
         }
 
-        public Usuario(long id, string nombre, string apellido, string nombreUsuario, string contrasenia, string mail)
+        public Usuario(string nombre, string apellido, string nombreUsuario, string contrasenia, string mail)
         {
-            this.id = id;
             this.nombre = nombre;
             this.apellido = apellido;
             this.nombreUsuario = nombreUsuario;
@@ -105,6 +104,16 @@ namespace PrimerEntrega
             this.mail = mail;
         }
 
+        // modifico este constructor para que llame al anterior y se carge el Id
+        public Usuario(long id, string nombre, string apellido, string nombreUsuario, string contrasenia, string mail) : this(nombre, apellido, nombreUsuario, contrasenia, mail)
+        {
+            this.id = id;
+        }
+
+        public override string ToString()
+        {
+            return $"Nombre y apellido: {this.nombre} {this.apellido}, usuario: {this.nombreUsuario}, email: {this.mail} ";
+        }
 
 
 

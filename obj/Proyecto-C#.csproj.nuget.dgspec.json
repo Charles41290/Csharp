@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\C#\\proyectos\\CursoCsharp\\PrimerEntrega\\PrimerEntrega.csproj": {}
+    "C:\\C#\\proyectos\\CursoCsharp\\PrimerEntrega\\Proyecto-C#.csproj": {}
   },
   "projects": {
-    "C:\\C#\\proyectos\\CursoCsharp\\PrimerEntrega\\PrimerEntrega.csproj": {
+    "C:\\C#\\proyectos\\CursoCsharp\\PrimerEntrega\\Proyecto-C#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C#\\proyectos\\CursoCsharp\\PrimerEntrega\\PrimerEntrega.csproj",
-        "projectName": "PrimerEntrega",
-        "projectPath": "C:\\C#\\proyectos\\CursoCsharp\\PrimerEntrega\\PrimerEntrega.csproj",
+        "projectUniqueName": "C:\\C#\\proyectos\\CursoCsharp\\PrimerEntrega\\Proyecto-C#.csproj",
+        "projectName": "Proyecto-C#",
+        "projectPath": "C:\\C#\\proyectos\\CursoCsharp\\PrimerEntrega\\Proyecto-C#.csproj",
         "packagesPath": "C:\\Users\\RomeroRodriguezCarlo\\.nuget\\packages\\",
         "outputPath": "C:\\C#\\proyectos\\CursoCsharp\\PrimerEntrega\\obj\\",
         "projectStyle": "PackageReference",
