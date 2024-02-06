@@ -99,16 +99,25 @@ namespace PrimerEntrega
 
         }
 
-        public Producto(long id, string descripcion, double costo, double precioVenta, int stock, long idUsuario)
+        public Producto(string descripcion, double costo, double precioVenta, int stock, long idUsuario)
         {
-            this.id = id;
             this.descripcion = descripcion;
             this.costo = costo;
             this.precioVenta= precioVenta;
             this.stock = stock;
-            this.idUsuario= idUsuario;
+            this.idUsuario = idUsuario;
         }
 
+        public Producto(long id, string descripcion, double costo, double precioVenta, int stock, long idUsuario) : this(descripcion, costo, precioVenta, stock, idUsuario) 
+        {
+            this.id = id;
+            
+        }
+
+        public override string ToString()
+        {
+            return $"Id: {this.Id}, Descripción: {this.Descripcion}, Costo: {this.Costo}, Precio de venta: {this.PrecioVenta}";
+        }
 
     }
 }

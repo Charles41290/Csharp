@@ -27,13 +27,39 @@ internal class Program
 
             //}
 
-            Usuario usuarioAModificar = new Usuario("Charles X", "Romero", "crom412", "elbolo", "bolololo@gmail.com");
-            //Console.WriteLine(usuarioAModificar.ToString());
-            if (UsuarioData.ActualizarUsuarioPorId(6, usuarioAModificar))
-            {
-                Console.WriteLine("Usuario actualizado");
+            //Usuario usuarioAModificar = new Usuario("Charles X", "Romero", "crom412", "elbolo", "bolololo@gmail.com");
+            ////Console.WriteLine(usuarioAModificar.ToString());
+            //if (UsuarioData.ActualizarUsuarioPorId(6, usuarioAModificar))
+            //{
+            //    Console.WriteLine("Usuario actualizado");
 
+            //}
+
+            // *******************************************
+            // Trabajo con la tabla Productos
+            // *******************************************
+            // Console.WriteLine(ProductoData.ObtenerProductoPorId(366));
+
+            // Agregar producto
+            //Producto productoAAgregar = new Producto("Latop Alienware M17", 76000, 85000, 5, 2);
+            //if (ProductoData.AgregarProducto(productoAAgregar))
+            //{
+            //    Console.WriteLine("Se agrego un usuario");
+
+            //}
+
+            // Eliminar producto
+            //if (ProductoData.BorrarUsuarioPorId(6))
+            //{
+            //    Console.WriteLine("Se elimino usuario");
+            //}
+            //Actualizacion de producto
+            Producto productoAActualizar = new Producto("Laptop Alienware M18", 80000,90000,4,2);
+            if (ProductoData.ActualizaProductoPorId(5, productoAActualizar));
+            {
+                Console.WriteLine("Se elimino usuario");
             }
+
 
         }
         catch (Exception ex)
