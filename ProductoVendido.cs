@@ -69,12 +69,21 @@ namespace PrimerEntrega
 
         }
 
-        public ProductoVendido(long id, long idProducto, int stock, long idVenta)
+        public ProductoVendido(long idProducto, int stock, long idVenta)
         {
-            this.id = id;
             this.idProducto = idProducto;
             this.stock = stock;
             this.idVenta = idVenta;
+        }
+
+        public ProductoVendido(long id, long idProducto, int stock, long idVenta) : this(idProducto, stock, idVenta) 
+        {
+            this.id = id;
+        }
+
+        public override string ToString()
+        {
+            return $"Id Producto Vendido: {this.IdProducto}, Stock: {this.Stock}, Id Venta: {this.IdVenta}";
         }
 
 

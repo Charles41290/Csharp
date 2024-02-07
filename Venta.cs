@@ -53,11 +53,20 @@ namespace PrimerEntrega
         // Constructores
         public Venta() { }
 
-        public Venta(long id, string comentarios,long idUsuario)
+        public Venta(string comentarios,long idUsuario)
         {
-            this.id = id;
             this.comentarios = comentarios;
             this.idUsuario = idUsuario;
+        }
+
+        public Venta(long id, string comentarios, long idUsuario):this(comentarios, idUsuario)
+        {
+            this.id = id;
+        }
+
+        public override string ToString()
+        {
+            return $"Venta Id: {this.Id}, Comentarios: {this.Comentarios}, Id Usuario: {this.IdUsuario}";
         }
 
     }

@@ -35,10 +35,16 @@ internal class Program
 
             //}
 
+            //List<Usuario> usuarios = UsuarioData.ListarUsuarios();
+            //foreach (var item in usuarios)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
             // *******************************************
             // Trabajo con la tabla Productos
             // *******************************************
-            // Console.WriteLine(ProductoData.ObtenerProductoPorId(366));
+            //Console.WriteLine(ProductoData.ObtenerProductoPorId(1));
 
             // Agregar producto
             //Producto productoAAgregar = new Producto("Latop Alienware M17", 76000, 85000, 5, 2);
@@ -54,11 +60,64 @@ internal class Program
             //    Console.WriteLine("Se elimino usuario");
             //}
             //Actualizacion de producto
-            Producto productoAActualizar = new Producto("Laptop Alienware M18", 80000,90000,4,2);
-            if (ProductoData.ActualizaProductoPorId(5, productoAActualizar));
+            //Producto productoAActualizar = new Producto("Laptop Alienware M18", 80000,90000,4,2);
+            //if (ProductoData.ActualizaProductoPorId(5, productoAActualizar));
+            //{
+            //    Console.WriteLine("Se elimino usuario");
+            //}
+
+            //List<Producto> productos = ProductoData.ListarProductos();
+            //foreach (Producto producto in productos)
+            //{
+            //    Console.WriteLine(producto.ToString());
+            //}
+
+            // *******************************************
+            // Trabajo con la tabla Ventas
+            // *******************************************
+            //List<Venta> ventas = VentaData.ListarVentas();
+            //foreach (var item in ventas)
+            //{
+            //    Console.WriteLine(item.ToString());   
+            //}
+
+            //Venta venta = VentaData.ObtenerVentaPorId(3);
+            //Console.WriteLine(venta.ToString());
+
+            //if (VentaData.BorrarVentaPorId(3)) ;
+            //{
+            //    Console.WriteLine("Se elimino usuario");
+            //}
+
+            //Venta ventaAActualizar = new Venta("No devuelvan lo robado",1);
+            //if (VentaData.ActualizarVentaPorId(98, ventaAActualizar))
+            //{
+            //    Console.WriteLine("Se actualizó usuario");
+            //}
+
+            // *******************************************
+            // Trabajo con la tabla ProductosVendidos
+            // *******************************************
+            //List<ProductoVendido> ventas = ProductoVendidoData.ListarProductosVendidos();
+            //foreach (var v in ventas)
+            //{
+            //    Console.WriteLine(v);
+            //}
+            //ProductoVendido venta = ProductoVendidoData.ObtenerProductoVendidoPorId(1);
+            //Console.WriteLine(venta.ToString());
+
+            //if (ProductoVendidoData.BorrarProductoVendidoPorId(3))
+            //{
+            //    Console.WriteLine("ProductoVendido Eliminado");
+            //}
+
+            ProductoVendido productoVendidoAModificar = new ProductoVendido(1,15,1);
+            if (ProductoVendidoData.ActualizarProductoVendidoPorId(1, productoVendidoAModificar))
             {
-                Console.WriteLine("Se elimino usuario");
+                Console.WriteLine("Producto Modificado");
             }
+
+
 
 
         }

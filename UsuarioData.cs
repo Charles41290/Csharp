@@ -11,6 +11,38 @@ namespace PrimerEntrega
     public static class UsuarioData
     {
         private static string connectionString = @"Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;";
+        private static List<Usuario> usuarios = new List<Usuario>();
+
+        public static List<Usuario> ListarUsuarios()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM Usuarios";
+                connection.Open();
+                SqlCommand comando = new SqlCommand(query, connection);
+                using(SqlDataReader reader = comando.ExecuteReader())
+                {
+                    if(reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            int idObtenido = Convert.ToInt32(reader["id"]);
+                            string nombre = reader.GetString(0);
+                            string apellido = reader.GetString(1);
+                            string nombreUsuario = reader.GetString(2);
+                            string password = reader.GetString(3);
+                            string mail = reader.GetString(4);
+
+                            Usuario usuarioObtenido = new Usuario(idObtenido, nombre, apellido, nombreUsuario, password, mail);
+                            usuarios.Add(usuarioObtenido);
+                        }
+                        return usuarios;
+                    }
+                    throw new Exception("No se encontraron usuarios");
+                }
+            }
+        }
+
 
         public static Usuario ObtenerUsuarioPorId(int id)
         {
@@ -31,7 +63,7 @@ namespace PrimerEntrega
                     string password = reader.GetString(3);
                     string mail = reader.GetString(4);
 
-                    Usuario  usuarioObtenido = new Usuario(id,nombre, apellido, nombreUsuario,password,mail);
+                    Usuario  usuarioObtenido = new Usuario(idObtenido,nombre, apellido, nombreUsuario,password,mail);
                     return usuarioObtenido;
                 }
                 throw new Exception("Id no encontrado");
